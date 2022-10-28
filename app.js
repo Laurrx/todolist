@@ -122,7 +122,7 @@ app.get("/:listName", function(req, res) {
     });
 });
 
-let port = process.event.PORT;
+let port = process.env.PORT;
 if (port == null || port =="") {
     port = 3000;
 };
