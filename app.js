@@ -122,6 +122,11 @@ app.get("/:listName", function(req, res) {
     });
 });
 
-app.listen(3000, function() {
-    console.log("Server started on port 3000");
+let port = process.event.PORT;
+if (port == null || port =="") {
+    port = 3000;
+};
+
+app.listen(port, function() {
+    console.log("Server has started!");
 });
