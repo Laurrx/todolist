@@ -4,15 +4,13 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
-// let items = ["Buy food", "Cook food", "Eat food"];
-// let workItems = [];
 
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-laur:Mongo123@cluster0.tujc8qs.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://ADMIN-AND-PASSWORD@cluster0.tujc8qs.mongodb.net/todolistDB");
 
 const itemsSchema = {
     name: String
